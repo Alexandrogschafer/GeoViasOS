@@ -9,7 +9,6 @@
 Repositório do **GeoVias Bagé-RS**, um sistema integrado de informações sobre vias e pavimentação urbana de Bagé/RS.  
 Projeto desenvolvido no âmbito da **UNIPAMPA**, com apoio do **PROEXT/PROEC**, integrando dados oficiais, colaborativos, levantamentos de campo e imagens de satélite.
 
-
 <p align="center">
   <img src="docs/imagens/logo_bageplus_moldura.png" alt="BAGÉ+, UNIPAMPA e PROEC/PROEXT" width="600">
 </p>
@@ -33,16 +32,27 @@ Projeto desenvolvido no âmbito da **UNIPAMPA**, com apoio do **PROEXT/PROEC**, 
 - **Dados oficiais (SIG Territorial de Bagé):** incluídos com crédito à **Prefeitura Municipal de Bagé**; eventuais restrições adicionais estão descritas em `DATA_LICENSE`.
 - **Logos (BAGÉ+, UNIPAMPA, PROEC/PROEXT):** uso institucional; **todos os direitos reservados** (não abrangidos pelas licenças acima).
 
-
 ---
 
 ## Agradecimentos
 
-Projeto realizado na Universidade Federal do Pampa (UNIPAMPA), com apoio do PROEXT/PROEC, no contexto da iniciativa BAGÉ+.
+Projeto realizado na Universidade Federal do Pampa (UNIPAMPA), com apoio do PROEXT/PROEC e PROPPI, no contexto da iniciativa BAGÉ+.
 
+---
+
+## Equipe do Projeto
+
+O **GeoVias Bagé-RS** conta com a participação de bolsistas e colaboradores que ajudam na atualização e análise dos dados:
+
+- Camila Oliveira de Leon  
+- Vitória Hobuss Ribeiro  
+
+---
 
 ## Contato
 
-Mantido por: Alexandro G. Schafer
+Mantido por: **Alexandro G. Schafer**  
+E-mail: <alexandro.schafer@unipampa.edu.br>  
 
 Repositório: https://github.com/Alexandrogschafer/GeoViasOS
+
