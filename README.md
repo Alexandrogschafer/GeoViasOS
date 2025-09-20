@@ -9,6 +9,11 @@
 Repositório do **GeoVias Bagé-RS**, um sistema integrado de informações sobre vias e pavimentação urbana de Bagé/RS.  
 Projeto desenvolvido no âmbito da **UNIPAMPA**, com apoio do **PROEXT/PROEC**, integrando dados oficiais, colaborativos, levantamentos de campo e imagens de satélite.
 
+
+<p align="center">
+  <img src="docs/imagens/logo_bageplus_moldura.png" alt="BAGÉ+, UNIPAMPA e PROEC/PROEXT" width="600">
+</p>
+
 ---
 
 ## Tecnologias
