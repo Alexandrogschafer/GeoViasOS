@@ -33,10 +33,6 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "Metodologia", url: "#_top", children: [
-              {title: "1.1 Fluxo Geral", url: "#11-fluxo-geral" },
-              {title: "1.2 Ferramentas", url: "#12-ferramentas" },
-          ]},
         ];
 
     </script>
@@ -73,10 +69,10 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     </div>
     
     <div class="wm-article-nav">
-      <a href=".." class="btn btn-xs btn-default pull-left">
+      <a href="../contribua/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href=".." class="btn btn-xs btn-link">
-        Início
+        Previous</a><a href="../contribua/" class="btn btn-xs btn-link">
+        Contribua com informações
       </a>
     </div>
     
@@ -84,18 +80,27 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <h1 id="metodologia">Metodologia</h1>
+    <div style="font-size:3rem; font-weight:700; margin-top:1.2rem; margin-bottom:0.5rem;">
+Metodologia
+</div>
+
+<blockquote>
 <p>A atualização e análise do sistema viário urbano de Bagé-RS foram conduzidas em etapas integradas de aquisição, tratamento, integração e qualificação de dados geoespaciais. O fluxo combinou processamento automatizado em Python (no Google Colab) e edição cartográfica no QGIS, garantindo padronização e rastreabilidade.</p>
-<h2 id="11-fluxo-geral">1.1 Fluxo Geral</h2>
+</blockquote>
+<div style="font-size:2.5rem; font-weight:700; margin-top:1.2rem; margin-bottom:0.5rem;">
+Fluxo Geral
+</div>
+
+<blockquote>
 <p>O processo seguiu as seguintes etapas:</p>
 <ol>
 <li>
 <p><strong>Delimitação da área de estudo</strong><br />
-   Polígono do município obtido via OpenStreetMap (OSM) com a biblioteca OSMnx e exportado para Shapefile.</p>
+  Polígono do município obtido via OpenStreetMap (OSM) com a biblioteca OSMnx e exportado para Shapefile.</p>
 </li>
 <li>
 <p><strong>Extração da rede viária</strong><br />
-   Rede motorizada (network_type = "drive") convertida para GeoDataFrames (nós e arestas) preservando atributos como <code>name</code>, <code>highway</code> e <code>length</code>.</p>
+ Rede motorizada (network_type = "drive") convertida para GeoDataFrames (nós e arestas) preservando atributos como <code>name</code>, <code>highway</code> e <code>length</code>.</p>
 </li>
 <li>
 <p><strong>Segmentação por interseções</strong><br />
@@ -103,11 +108,11 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </li>
 <li>
 <p><strong>Identificação e inserção de novas ruas</strong><br />
-   Comparação entre OSM, imagens do Google/QuickMapServices e arquivo GeoJSON da Prefeitura de Bagé para atualizar a rede.</p>
+  Comparação entre OSM, imagens do Google/QuickMapServices e arquivo GeoJSON da Prefeitura de Bagé para atualizar a rede.</p>
 </li>
 <li>
 <p><strong>Verificação e atualização toponímica</strong><br />
-   Conferência cruzada OSM × GeoJSON municipal × Google Maps e planilha oficial de nomes atuais/antigos para harmonizar os logradouros.</p>
+  Conferência cruzada OSM × GeoJSON municipal × Google Maps e planilha oficial de nomes atuais/antigos para harmonizar os logradouros.</p>
 </li>
 <li>
 <p><strong>Padronização do tipo de pavimento</strong><br />
@@ -115,20 +120,26 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </li>
 <li>
 <p><strong>Cálculos estatísticos</strong><br />
-   Agregação por logradouro e por bairro para obter extensão total (km), número de trechos, percentuais por tipo de pavimento e densidade viária.</p>
+  Agregação por logradouro e por bairro para obter extensão total (km), número de trechos, percentuais por tipo de pavimento e densidade viária.</p>
 </li>
 <li>
 <p><strong>Validação e controle de qualidade</strong><br />
-   Checagens visuais e automáticas para garantir integridade topológica, consistência dos atributos e registro das alterações.</p>
+  Checagens visuais e automáticas para garantir integridade topológica, consistência dos atributos e registro das alterações.</p>
 </li>
 </ol>
-<h2 id="12-ferramentas">1.2 Ferramentas</h2>
+</blockquote>
+<div style="font-size:2.5rem; font-weight:700; margin-top:1.2rem; margin-bottom:0.5rem;">
+Ferramentas
+</div>
+
+<blockquote>
 <ul>
 <li><strong>Python/Google Colab</strong> para automatização, normalização de dados e geração de tabelas, gráficos e mapas interativos (GeoPandas, Shapely, Folium, Matplotlib, Plotly, OSMnx).  </li>
 <li><strong>QGIS</strong> para edição manual e conferência visual das geometrias.  </li>
 <li><strong>Google Drive</strong> para centralizar arquivos de entrada e saída e assegurar reprodutibilidade.  </li>
 </ul>
 <p>O resultado final é uma base viária atualizada e consolidada, apta para análises espaciais e suporte ao planejamento municipal.</p>
+</blockquote>
 
   <br>
     
@@ -151,10 +162,10 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     </div>
     
     <div class="wm-article-nav">
-      <a href=".." class="btn btn-xs btn-default pull-left">
+      <a href="../contribua/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href=".." class="btn btn-xs btn-link">
-        Início
+        Previous</a><a href="../contribua/" class="btn btn-xs btn-link">
+        Contribua com informações
       </a>
     </div>
     

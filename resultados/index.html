@@ -33,13 +33,21 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "4. Resultados", url: "#_top", children: [
-              {title: "4.1 Distribui\u00e7\u00e3o dos comprimentos dos logradouros", url: "#41-distribuicao-dos-comprimentos-dos-logradouros" },
-              {title: "4.2 Distribui\u00e7\u00e3o acumulada", url: "#42-distribuicao-acumulada" },
-              {title: "4.3 Boxplot dos comprimentos", url: "#43-boxplot-dos-comprimentos" },
-              {title: "4.4 Composi\u00e7\u00e3o por tipo de pavimento", url: "#44-composicao-por-tipo-de-pavimento" },
-              {title: "4.5 Resultados por bairro \u2014 densidade vi\u00e1ria e extens\u00e3o", url: "#45-resultados-por-bairro-densidade-viaria-e-extensao" },
-              {title: "4.6 Resultados por bairro \u2014 menores densidades", url: "#46-resultados-por-bairro-menores-densidades" },
+          {title: "4.1 Distribui\u00e7\u00e3o dos comprimentos dos logradouros", url: "#_top", children: [
+          ]},
+          {title: "4.2 Distribui\u00e7\u00e3o acumulada", url: "#42-distribuicao-acumulada", children: [
+          ]},
+          {title: "4.3 Boxplot dos comprimentos", url: "#43-boxplot-dos-comprimentos", children: [
+          ]},
+          {title: "4.4 Composi\u00e7\u00e3o por tipo de pavimento", url: "#44-composicao-por-tipo-de-pavimento", children: [
+          ]},
+          {title: "4.5 Resultados por bairro \u2014 densidade vi\u00e1ria e extens\u00e3o", url: "#45-resultados-por-bairro-densidade-viaria-e-extensao", children: [
+          ]},
+          {title: "4.6 Resultados por bairro \u2014 menores densidades", url: "#46-resultados-por-bairro-menores-densidades", children: [
+          ]},
+          {title: "Visualiza\u00e7\u00f5es completas \u2014 gr\u00e1ficos e mapas interativos", url: "#visualizacoes-completas-graficos-e-mapas-interativos", children: [
+          ]},
+          {title: "Nota metodol\u00f3gica \u2014 recorte por bairro", url: "#nota-metodologica-recorte-por-bairro", children: [
           ]},
         ];
 
@@ -88,35 +96,56 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <h1 id="4-resultados">4. Resultados</h1>
+    <div style="font-size:3rem; font-weight:700; margin-top:1.2rem; margin-bottom:0.5rem;">
+Resultados
+</div>
+
+<blockquote>
 <p>A aplicação da metodologia resultou em uma base viária atualizada e padronizada para a área urbana de Bagé-RS. Com esse insumo, foram elaborados indicadores sintéticos e visualizações que caracterizam o comprimento dos logradouros, a composição do pavimento e os principais rankings por bairro.</p>
+</blockquote>
 <h2 id="41-distribuicao-dos-comprimentos-dos-logradouros">4.1 Distribuição dos comprimentos dos logradouros</h2>
+<blockquote>
 <p>A distribuição dos comprimentos evidencia predominância de logradouros curtos, com maior frequência nas faixas de 100–199 m, 200–299 m e 400–499 m (Figura 1). Considerando exclusivamente trechos inferiores a 5.000 m, verifica-se redução monotônica da frequência à medida que o comprimento aumenta, permanecendo a maior parte dos logradouros abaixo de 1 km (Figura 2).</p>
+</blockquote>
 <p><img alt="Frequência de logradouros por faixa de comprimento" class="center" src="../imagens/1_frequencia_comprimento.png" width="60%" /></p>
 <p><img alt="Distribuição dos logradouros (&lt; 5000 m)" class="center" src="../imagens/2_distribuicao_menos_5000m.png" width="60%" /></p>
 <h2 id="42-distribuicao-acumulada">4.2 Distribuição acumulada</h2>
+<blockquote>
 <p>A curva acumulada confirma a estrutura fragmentada da malha: mais de 80% dos logradouros possuem menos de 500 m e aproximadamente 95% estão abaixo de 1 km (Figura 3).</p>
+</blockquote>
 <p><img alt="Distribuição acumulada dos comprimentos dos logradouros" class="center" src="../imagens/3_distribuicao_acumulada.png" width="40%" /></p>
 <h2 id="43-boxplot-dos-comprimentos">4.3 Boxplot dos comprimentos</h2>
+<blockquote>
 <p>O resumo estatístico por boxplot indica mediana em torno de 300–400 m e a presença de poucos trechos muito longos (&gt; 5 km), associados a eixos estruturantes e conexões interbairros (Figura 4).</p>
+</blockquote>
 <p><img alt="Boxplot dos comprimentos dos logradouros" class="center" src="../imagens/4_boxplot_comprimentos.png" width="40%" /></p>
 <h2 id="44-composicao-por-tipo-de-pavimento">4.4 Composição por tipo de pavimento</h2>
+<blockquote>
 <p>No conjunto das vias pavimentadas, prevalece o pavimento asfáltico (~59,7%; 115,87 km), seguido por paralelepípedo (~29,8%; 57,92 km) e intertravado de concreto (~10,4%; 20,28 km) (Figura 5). Na rede total, a participação de vias não pavimentadas é majoritária (~63,1%; 332,30 km), ao passo que as pavimentadas somam ~36,9% distribuídas entre asfalto (~22,0%; 115,87 km), paralelepípedo (~11,0%; 57,92 km) e intertravado (~3,9%; 20,28 km) (Figura 6).</p>
-<p><img alt="Composição das vias pavimentadas" class="center" src="../imagens/5_grafico2.png" width="60%" /></p>
+</blockquote>
+<p><img alt="Composição das vias pavimentadas" class="center" src="../imagens/5_grafico2.png" width="40%" /></p>
 <p><img alt="Composição das vias quanto ao tipo de pavimento" class="center" src="../imagens/6_grafico1.png" width="40%" /></p>
 <h2 id="45-resultados-por-bairro-densidade-viaria-e-extensao">4.5 Resultados por bairro — densidade viária e extensão</h2>
+<blockquote>
 <p>Entre os bairros/loteamentos com maiores densidades viárias (km/km²) destacam-se Moriá e Ebenezer e Vila Kenndy. Em parte deles, a elevada densidade associa-se a proporção substantiva de vias pavimentadas; em outros, verifica-se predominância de não pavimentadas, como em Habitar Brasil, Arvorezinha, Camilo Gomes, São Pedro, Narciso Suñé e Vila Stand (Figura 7). No ranking de percentual de pavimentação, sobressaem Povo Novo, 3 Irmãos, Dois Irmãos, São Judas, Jardim do Castelo e Teorema, com cobertura próxima de integral e predomínio do asfalto; observam-se composições mistas em Estrela Dalva (paralelepípedo e intertravado) e em Mascarenhas 2ª Fase (paralelepípedo), além de Universitário Minotto e Manoel Pinto Madureira (Figura 8). Em termos de extensão total, o Centro lidera com ampla quilometragem e participação expressiva de paralelepípedo, seguido por bairros com grande estoque de vias não pavimentadas, como Hortícula Nova Esperança, Vila Floresta e Vila Damé; casos como Jardim do Castelo, Castro Alves e Vila São Carlos apresentam perfil misto (Figura 9).</p>
+</blockquote>
 <p><img alt="Densidade viária por bairro — Top 10" class="center" src="../imagens/7_densidade.png" width="60%" /></p>
 <p><img alt="Distribuição percentual dos tipos de pavimento — Top 10 (excluindo CICADE e Santa Tereza)" class="center" src="../imagens/8_top_10_porc_pav.png" width="60%" /></p>
 <p><img alt="Extensão das vias por tipo de pavimento — Top 10 bairros" class="center" src="../imagens/9_top_10_km_pavimento.png" width="60%" /></p>
 <h2 id="46-resultados-por-bairro-menores-densidades">4.6 Resultados por bairro — menores densidades</h2>
+<blockquote>
 <p>O grupo com menores densidades é formado, entre outros, por Loteamento Hidráulica, Loteamento Waldemar Mendonça e Balança Municipal, predominando vias não pavimentadas. Também figuram São Judas e 3 Irmãos, que, embora com densidade total reduzida, apresentam componente pavimentado visível. Com valores ainda baixos em relação ao conjunto municipal, completam a lista Vila Santa Ana, Santa Terezinha, Vila Azevedo, Higienópolis e Sol Nascente.</p>
+</blockquote>
 <hr />
-<p>Visualizações completas — gráficos e mapas interativos<br />
-Os gráficos e mapas interativos, com os dados de todas as vias e de todos os bairros (não apenas os Top 10), podem ser acessados pelo menu/barra lateral do site. As seções de Gráficos e Mapas permitem explorar, aplicar zoom, consultar tooltips com métricas por trecho/bairro e, quando disponível, realizar o download das visualizações.</p>
+<h2 id="visualizacoes-completas-graficos-e-mapas-interativos">Visualizações completas — gráficos e mapas interativos</h2>
+<blockquote>
+<p>Os gráficos e mapas interativos, com os dados de todas as vias e de todos os bairros (não apenas os Top 10), podem ser acessados pelo menu/barra lateral do site. As seções de Gráficos e Mapas permitem explorar, aplicar zoom, consultar tooltips com métricas por trecho/bairro e, quando disponível, realizar o download das visualizações.</p>
+</blockquote>
 <hr />
-<p>Nota metodológica — recorte por bairro<br />
-Todos os cálculos por bairro foram realizados com base na delimitação oficial de bairros disponibilizada pela Prefeitura Municipal de Bagé (SIG Territorial). Dessa forma, comprimentos, densidades e percentuais refletem exclusivamente o conteúdo desses polígonos. Como trechos viários podem cruzar limites de bairro, e considerando possíveis atualizações de limites, obras em andamento ou divergências cadastrais, os valores apresentados podem não corresponder exatamente ao verificado em campo. Pequenas diferenças também podem decorrer de tolerâncias de geoprocessamento, cortes na fronteira e arredondamentos.</p>
+<h2 id="nota-metodologica-recorte-por-bairro">Nota metodológica — recorte por bairro</h2>
+<blockquote>
+<p>Todos os cálculos por bairro foram realizados com base na delimitação oficial de bairros disponibilizada pela Prefeitura Municipal de Bagé (SIG Territorial). Dessa forma, comprimentos, densidades e percentuais refletem exclusivamente o conteúdo desses polígonos. Como trechos viários podem cruzar limites de bairro, e considerando possíveis atualizações de limites, obras em andamento ou divergências cadastrais, os valores apresentados podem não corresponder exatamente ao verificado em campo. Pequenas diferenças também podem decorrer de tolerâncias de geoprocessamento, cortes na fronteira e arredondamentos.</p>
+</blockquote>
 
   <br>
     
