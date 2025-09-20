@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="canonical" href="https://alexandrogschafer.github.io/GeoViasOS/metodologia/">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Metodologia - GeoViasOS</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <link href="../css/custom.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Metodologia", url: "#_top", children: [
+              {title: "1.1 Fluxo Geral", url: "#11-fluxo-geral" },
+              {title: "1.2 Ferramentas", url: "#12-ferramentas" },
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script>
+      <script src="../js/layout-fix.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../resultados/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../resultados/" class="btn btn-xs btn-link">
+        Resultados
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href=".." class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href=".." class="btn btn-xs btn-link">
+        Início
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h1 id="metodologia">Metodologia</h1>
+<p>A atualização e análise do sistema viário urbano de Bagé-RS foram conduzidas em etapas integradas de aquisição, tratamento, integração e qualificação de dados geoespaciais. O fluxo combinou processamento automatizado em Python (no Google Colab) e edição cartográfica no QGIS, garantindo padronização e rastreabilidade.</p>
+<h2 id="11-fluxo-geral">1.1 Fluxo Geral</h2>
+<p>O processo seguiu as seguintes etapas:</p>
+<ol>
+<li>
+<p><strong>Delimitação da área de estudo</strong><br />
+   Polígono do município obtido via OpenStreetMap (OSM) com a biblioteca OSMnx e exportado para Shapefile.</p>
+</li>
+<li>
+<p><strong>Extração da rede viária</strong><br />
+   Rede motorizada (network_type = "drive") convertida para GeoDataFrames (nós e arestas) preservando atributos como <code>name</code>, <code>highway</code> e <code>length</code>.</p>
+</li>
+<li>
+<p><strong>Segmentação por interseções</strong><br />
+   Divisão das linhas nos pontos de cruzamento para gerar trechos homogêneos, adequados à edição cartográfica no QGIS.</p>
+</li>
+<li>
+<p><strong>Identificação e inserção de novas ruas</strong><br />
+   Comparação entre OSM, imagens do Google/QuickMapServices e arquivo GeoJSON da Prefeitura de Bagé para atualizar a rede.</p>
+</li>
+<li>
+<p><strong>Verificação e atualização toponímica</strong><br />
+   Conferência cruzada OSM × GeoJSON municipal × Google Maps e planilha oficial de nomes atuais/antigos para harmonizar os logradouros.</p>
+</li>
+<li>
+<p><strong>Padronização do tipo de pavimento</strong><br />
+   Criação do campo <code>tipo_pavimento</code> com domínio unificado (Asfalto, Pavimento Intertravado de Concreto, Paralelepípedo, Pedra Irregular e Sem Pavimento).</p>
+</li>
+<li>
+<p><strong>Cálculos estatísticos</strong><br />
+   Agregação por logradouro e por bairro para obter extensão total (km), número de trechos, percentuais por tipo de pavimento e densidade viária.</p>
+</li>
+<li>
+<p><strong>Validação e controle de qualidade</strong><br />
+   Checagens visuais e automáticas para garantir integridade topológica, consistência dos atributos e registro das alterações.</p>
+</li>
+</ol>
+<h2 id="12-ferramentas">1.2 Ferramentas</h2>
+<ul>
+<li><strong>Python/Google Colab</strong> para automatização, normalização de dados e geração de tabelas, gráficos e mapas interativos (GeoPandas, Shapely, Folium, Matplotlib, Plotly, OSMnx).  </li>
+<li><strong>QGIS</strong> para edição manual e conferência visual das geometrias.  </li>
+<li><strong>Google Drive</strong> para centralizar arquivos de entrada e saída e assegurar reprodutibilidade.  </li>
+</ul>
+<p>O resultado final é uma base viária atualizada e consolidada, apta para análises espaciais e suporte ao planejamento municipal.</p>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../resultados/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../resultados/" class="btn btn-xs btn-link">
+        Resultados
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href=".." class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href=".." class="btn btn-xs btn-link">
+        Início
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+      <p>
+        <a href="https://github.com/Alexandrogschafer/GeoViasOS/edit/master/docs/metodologia.md"><i class="fa fa-github"></i>
+Edit on GitHub</a>
+      </p>
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

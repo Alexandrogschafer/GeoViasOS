@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="None">
+    
+    <link rel="canonical" href="https://alexandrogschafer.github.io/GeoViasOS/">
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>GeoViasOS</title>
+    <link href="./css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="./css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="./css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/highlight.css">
+    <link href="css/custom.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/bootstrap-3.3.7.min.js"></script>
+    <script src="./js/highlight.pack.js"></script>
+    
+      <script src="./js/elasticlunr.min.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '.';
+      var is_top_frame = (window === window.parent);
+        
+        var pageToc = [
+          {title: "GeoVias Bag\u00e9-RS", url: "#_top", children: [
+              {title: "O que voc\u00ea encontrar\u00e1 aqui", url: "#o-que-voce-encontrara-aqui" },
+              {title: "Por que usar esta ferramenta", url: "#por-que-usar-esta-ferramenta" },
+          ]},
+        ];
+
+    </script>
+    <script src="./js/base.js"></script>
+      <script src="js/layout-fix.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+<nav class="navbar wm-page-top-frame">
+  <div class="container-fluid wm-top-container">
+    
+    <div class="wm-top-tool pull-right wm-vcenter">
+      <form class="dropdown wm-vcentered" id="wm-search-form" action="./search.html">
+        
+        <button id="wm-search-show" class="btn btn-sm btn-default" type="submit"
+          ><i class="fa fa-search" aria-hidden="true"></i></button>
+
+        <div class="input-group input-group-sm wm-top-search">
+          <input type="text" name="q" class="form-control" id="mkdocs-search-query" placeholder="Search" autocomplete="off">
+          <span class="input-group-btn" role="search">
+            
+            <button class="btn btn-default dropdown-toggle collapse" data-toggle="dropdown" type="button"><span class="caret"></span></button>
+            <ul id="mkdocs-search-results" class="dropdown-menu dropdown-menu-right"></ul>
+            <button id="wm-search-go" class="btn btn-default" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+          </span>
+        </div>
+      </form>
+    </div>
+
+    
+    <div class="wm-top-tool wm-vcenter pull-right wm-small-left">
+      <button id="wm-toc-button" type="button" class="btn btn-sm btn-default wm-vcentered"><i class="fa fa-th-list" aria-hidden="true"></i></button>
+    </div>
+
+    
+    
+
+    
+    <a href="" class="wm-top-brand wm-top-link wm-vcenter">
+      
+      <div class="wm-top-title">
+        GeoViasOS<br>
+        
+      </div>
+    </a>
+  </div>
+</nav>
+
+  <div id="main-content" class="wm-page-top-frame">
+    
+<nav class="wm-toc-pane">
+  
+    <ul class="wm-toctree wm-toc-repo">
+      <li class="wm-toc-li wm-toc-lev1">
+      <a class="wm-article-link wm-toc-text" href="https://github.com/Alexandrogschafer/GeoViasOS">
+        <i class="fa fa-github"></i>
+
+        GitHub
+      </a>
+      </li>
+    </ul>
+  <ul class="wm-toctree">
+        <li class="wm-toc-li wm-toc-lev1 "><a href="" class="wm-article-link wm-toc-text">Início</a>
+</li>
+        <li class="wm-toc-li wm-toc-lev1 "><a href="metodologia/" class="wm-article-link wm-toc-text">Metodologia</a>
+</li>
+        <li class="wm-toc-li wm-toc-lev1 "><a href="resultados/" class="wm-article-link wm-toc-text">Resultados</a>
+</li>
+        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">Mapas interativos</span>
+</li>
+<li class="wm-toc-li-nested collapse">
+  <ul class="wm-toctree">
+      <li class="wm-toc-li wm-toc-lev2 "><a href="mapas/" class="wm-article-link wm-toc-text">Visão geral</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="mapas/mapa1/" class="wm-article-link wm-toc-text">Rede viária</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="mapas/mapa2/" class="wm-article-link wm-toc-text">Cobertura viária por tipo de pavimento</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="mapas/mapa3/" class="wm-article-link wm-toc-text">Pavimentação por via</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="mapas/mapa4/" class="wm-article-link wm-toc-text">Indicadores por bairro/loteamento</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="mapas/mapa5/" class="wm-article-link wm-toc-text">Cobertura viária por tipo de pavimento (bairro/loteamento)</a>
+</li>
+  </ul>
+</li>
+
+        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">Gráficos</span>
+</li>
+<li class="wm-toc-li-nested collapse">
+  <ul class="wm-toctree">
+      <li class="wm-toc-li wm-toc-lev2 "><a href="graficos/" class="wm-article-link wm-toc-text">Visão geral</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="graficos/grafico1/" class="wm-article-link wm-toc-text">Composição das vias quanto ao tipo de pavimento</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="graficos/grafico2/" class="wm-article-link wm-toc-text">Composição das vias pavimentadas</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="graficos/grafico3/" class="wm-article-link wm-toc-text">Extensão total das vias por bairro/loteamento</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="graficos/grafico4/" class="wm-article-link wm-toc-text">Proporção de vias pavimentadas e não pavimentadas por bairro/loteamento</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="graficos/grafico5/" class="wm-article-link wm-toc-text">Densidade viária por bairro/loteamento</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="graficos/grafico6/" class="wm-article-link wm-toc-text">Extensão das vias por tipo de pavimento por bairro/loteamento</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="graficos/grafico7/" class="wm-article-link wm-toc-text">Distribuição percentual dos tipos de pavimento por bairro/loteamento</a>
+</li>
+  </ul>
+</li>
+
+        <li class="wm-toc-li wm-toc-lev1 "><a href="dados/" class="wm-article-link wm-toc-text">Dados</a>
+</li>
+        <li class="wm-toc-li wm-toc-lev1 "><a href="reproducibilidade/" class="wm-article-link wm-toc-text">Reprodutibilidade</a>
+</li>
+        <li class="wm-toc-li wm-toc-lev1 "><a href="sobre/" class="wm-article-link wm-toc-text">Sobre</a>
+</li>
+  </ul>
+</nav>
+
+    <div class="wm-content-pane">
+      <iframe class="wm-article" name="article"></iframe>
+    </div>
+  </div>
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="metodologia/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="metodologia/" class="btn btn-xs btn-link">
+        Metodologia
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h1 id="geovias-bage-rs">GeoVias Bagé-RS</h1>
+<p><em>Sistema integrado de informações sobre vias e pavimentação urbana</em></p>
+<blockquote>
+<p><strong>Sobre o projeto</strong><br />
+O <strong>GeoVias Bagé-RS</strong> é desenvolvido no âmbito da <strong>Universidade Federal do Pampa (UNIPAMPA)</strong>, com apoio do <strong>edital PROFEXT</strong> e como parte da iniciativa <strong>BAGÉ+</strong>.<br />
+Esta ferramenta reúne e integra dados oficiais, colaborativos, levantamentos de campo e imagens de satélite para oferecer a base mais completa e atualizada sobre o sistema viário e a pavimentação urbana do município.</p>
+</blockquote>
+<h2 id="o-que-voce-encontrara-aqui">O que você encontrará aqui</h2>
+<ul>
+<li><a href="dados/">Início e Dados</a> — contexto e descrição dos dados utilizados.</li>
+<li><a href="metodologia/">Metodologia</a> — etapas do fluxo de trabalho e técnicas aplicadas para garantir consistência e padronização.</li>
+<li><a href="resultados/">Resultados</a> — análise de indicadores, mapas e gráficos.</li>
+<li><a href="reproducibilidade/">Reprodutibilidade</a> — como executar o notebook no Google Colab e gerar novamente todos os resultados.</li>
+</ul>
+<h2 id="por-que-usar-esta-ferramenta">Por que usar esta ferramenta</h2>
+<ul>
+<li>É a base mais completa e atualizada disponível atualmente sobre o sistema viário e a pavimentação de Bagé.</li>
+<li>Integra dados oficiais, colaborativos, levantamentos de campo e imagens de satélite validados e padronizados.</li>
+<li>Oferece mapas interativos, tabelas e gráficos prontos para uso em planejamento urbano, pesquisas e análises comparativas.</li>
+</ul>
+<p><a href="mapas/">→ Mapas</a> · <a href="graficos/">→ Gráficos</a> · <a href="dados/">→ Dados</a></p>
+<p><img alt="Logos parceiros" class="center" src="imagens/logo_bageplus_moldura.png" width="40%" /></p>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="metodologia/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="metodologia/" class="btn btn-xs btn-link">
+        Metodologia
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+      <p>
+        <a href="https://github.com/Alexandrogschafer/GeoViasOS/edit/master/docs/index.md"><i class="fa fa-github"></i>
+Edit on GitHub</a>
+      </p>
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2025-09-20 02:29:21.596425+00:00
+-->

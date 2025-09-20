@@ -1,0 +1,177 @@
+* ===== Estilo dos frames (mapas/gráficos) ===== */
+.frame-viewport {
+ position: relative;
+ width: 100%;
+ height: 80vh;
+ border: 1px solid #e5e7eb;
+ border-radius: 12px;
+ overflow: hidden;
+ margin: 1rem 0;
+}
+.frame-viewport iframe {
+ position: absolute;
+ inset: 0;
+ width: 100%;
+ height: 100%;
+ border: 0;
+}
+
+
+/* ===== Grid dos cartões ===== */
+.grid-cards {
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+ gap: 1rem;
+ margin: 1rem 0;
+ list-style: none;
+ padding: 0;
+}
+.card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 1rem; }
+.card h3 { margin: .2rem 0 .6rem 0; }
+.card p  { margin: 0; color: #666; }
+
+
+/* imagens com classe .half-img (para PNGs em páginas .md) */
+.half-img {
+ max-width: 50% !important;
+ height: auto !important;
+ display: block;
+ margin: 1rem auto;
+}
+
+
+/* ===== Ajustes para desktops grandes (≥1200 px) ===== */
+@media (min-width: 1200px) {
+ .wm-toc-pane {
+   width: 240px !important; /* sidebar maior em desktops grandes */
+ }
+ .wm-content-pane {
+   margin-left: 250px !important;
+   width: calc(100vw - 250px) !important;
+   max-width: none !important;
+   padding-left: 0 !important;
+   padding-right: 16px;
+ }
+ .wm-content-pane .wm-article {
+   display: block;
+   width: 100% !important;
+   height: calc(100vh - 64px) !important; /* ajuste a altura do topo se precisar */
+   border: 0;
+ }
+ .container-fluid.wm-page-content,
+ .wm-page-content .container-fluid,
+ .wm-page-content .container {
+   max-width: none !important;
+   width: 100% !important;
+   padding-left: 16px;
+   padding-right: 16px;
+ }
+ .frame-viewport { height: 90vh; }
+}
+
+
+/* ===== Ajustes para laptops médios (992–1199 px) ===== */
+@media (min-width: 992px) and (max-width: 1199px) {
+ .wm-toc-pane {
+   width: 200px !important; /* sidebar um pouco menor */
+ }
+ .wm-content-pane {
+   margin-left: 210px !important;
+   width: calc(100vw - 210px) !important;
+   max-width: none !important;
+   padding-left: 0 !important;
+   padding-right: 16px;
+ }
+ .wm-content-pane .wm-article {
+   display: block;
+   width: 100% !important;
+   height: calc(100vh - 64px) !important;
+   border: 0;
+ }
+ .container-fluid.wm-page-content,
+ .wm-page-content .container-fluid,
+ .wm-page-content .container {
+   max-width: none !important;
+   width: 100% !important;
+   padding-left: 16px;
+   padding-right: 16px;
+ }
+ .frame-viewport { height: 88vh; }
+}
+
+
+
+
+/* ===== Sidebar: tipografia e quebra de linha ===== */
+.wm-toc-pane {
+ font-size: 14px;           /* antes ~16px */
+ line-height: 1.25;         /* mais “apertado”, mas legível */
+}
+
+
+.wm-toc-pane a {
+ font-size: 14px;
+ line-height: 1.25;
+ overflow-wrap: anywhere;   /* permite quebrar nomes longos */
+ hyphens: auto;             /* hifeniza quando possível */
+ text-decoration: none;
+}
+
+
+.wm-toc-pane li {
+ margin: 0 0 .25rem 0;      /* aproxima itens */
+}
+
+
+.wm-toc-pane .caption {      /* títulos “Mapas interativos”, “Gráficos”…  */
+ font-weight: 600;
+ margin-top: .5rem;
+ margin-bottom: .25rem;
+}
+
+
+/* bloco para logos lado a lado, com espaçamento */
+.brand-logos {
+ display: flex;
+ align-items: center;
+ justify-content: center;   /* ou flex-start, se preferir à esquerda */
+ gap: 28px;                 /* << ajuste o espaço entre os logos */
+ flex-wrap: wrap;           /* quebra linha no mobile */
+ margin: 1rem 0;
+}
+
+
+.brand-logos img {
+ max-height: 90px;          /* limite de altura (ajuste se quiser) */
+ display: block;
+}
+
+
+img.center {
+ display: block;
+ margin: 0.5rem auto;
+}
+
+
+
+
+
+
+.logos-centro {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 10px;               /* espaço entre os logos */
+ flex-wrap: wrap;         /* quebra no mobile */
+ margin: 1rem 0;
+}
+
+
+/* controla o tamanho dos logos de forma responsiva */
+.logos-centro img {
+ width: clamp(180px, 22vw, 300px);  /* min 180, ideal 22% da viewport, máx 300 */
+ height: auto;
+}
+
+
+
