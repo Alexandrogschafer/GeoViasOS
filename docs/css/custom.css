@@ -174,4 +174,142 @@ img.center {
 }
 
 
+/* === Retrato / telas estreitas: não achatar os embeds === */
+@media (max-width: 991.98px), (orientation: portrait){
+  /* garante que o wrapper fique alto no retrato */
+  .frame-viewport{
+    height: 78svh;          /* svh é mais estável que vh no mobile */
+    min-height: 65svh;
+  }
 
+  /* se algo do tema limitar iframes, anula aqui */
+  .wm-article iframe,
+  .md-typeset iframe{
+    width: 100% !important;
+    height: 75svh !important;
+    max-height: none !important;
+    border: 0;
+    display: block;
+  }
+
+  /* evita “esmagar” o conteúdo por causa da sidebar/layout */
+  .wm-content-pane{
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    padding-left: 0 !important;
+    padding-right: 12px;
+  }
+}
+
+/* Nunca limitar altura de embeds (cobre Plotly/Folium) */
+.md-typeset iframe,
+.plotly-graph-div,
+.folium-map{
+  max-height: none !important;
+  height: auto;
+}
+
+/* Seu wrapper (troca vh por svh para funcionar melhor no mobile) */
+.frame-viewport{
+  position: relative;
+  width: 100%;
+  height: 80svh;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+.frame-viewport iframe{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+/* ===== Mobile/estreito: overlay, sem empurrar o conteúdo ===== */
+@media (max-width: 991.98px){
+  .wm-content-pane{
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+}
+
+/* ===== Viewports ≥ 992px: sidebar fixa empurrando o conteúdo ===== */
+@media (min-width: 992px){
+  .wm-toc-pane{
+    width: 210px !important;            /* ajuste igual ao seu breakpoint 992–1199 */
+  }
+  .wm-content-pane{
+    margin-left: 210px !important;       /* NÃO zerar no retrato largo */
+    width: calc(100vw - 210px) !important;
+    max-width: none !important;
+  }
+}
+
+/* ≥1200px segue empurrando com 240–250px (mantém suas regras existentes) */
+@media (min-width: 1200px){
+  .wm-toc-pane{ width: 240px !important; }
+  .wm-content-pane{
+    margin-left: 250px !important;
+    width: calc(100vw - 250px) !important;
+  }
+}
+
+
+/* 1) Esconde o TOC local quando o tema o marca explicitamente */
+.wm-toc-pane nav.local-toc,
+.wm-toc-pane .local-toc,
+.wm-toc-pane nav[aria-label="Table of contents"]{
+  display: none !important;
+}
+
+/* 2) (Robusto) Esconde apenas ULs cujo conteúdo são âncoras (#...) = subtítulos da página
+   Requer suporte a :has() — funciona nos navegadores modernos */
+.wm-toc-pane ul:has(> li > a[href^="#"]) {
+  display: none !important;
+}
+
+/* 3) (Opcional) Se o tema aninha o TOC local logo abaixo do item atual */
+.wm-toc-pane li.current > ul:has(> li > a[href^="#"]),
+.wm-toc-pane li.active  > ul:has(> li > a[href^="#"]) {
+  display: none !important;
+}
+
+
+
+
+
+/* Imagens de markdown: nunca ultrapassar o container */
+.md-typeset img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* No retrato, aumente imagens que ficaram “pequenas” por width fixo/percentual */
+@media (max-width: 991.98px), (orientation: portrait){
+  /* qualquer imagem */
+  .md-typeset img {
+    width: 100% !important;         /* força usar toda a largura disponível */
+    max-width: 100% !important;
+  }
+
+  /* sua classe half-img deve virar “quase cheia” no retrato */
+  .half-img{
+    max-width: 96% !important;
+  }
+
+  /* imagens centralizadas que você usou com <img class="center" ...> */
+  img.center{
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* se houver imagens com atributo width (ex.: {width="40%"}), ignore-o no retrato */
+  .md-typeset img[width]{
+    width: 100% !important;
+  }
+}

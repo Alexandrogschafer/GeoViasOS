@@ -18,29 +18,29 @@ markdown_extensions:
 
 extra_javascript:
   - js/layout-fix.js
-
+  
   
 nav:
   - Início: index.md
+  - Contribua com informações: contribua.md
   - Metodologia: metodologia.md
   - Resultados: resultados.md
   - Mapas interativos:
       - Visão geral: mapas/index.md
-      - Rede viária: mapas/mapa1.md
-      - Cobertura viária por tipo de pavimento: mapas/mapa2.md
-      - Pavimentação por via: mapas/mapa3.md
-      - Indicadores por bairro/loteamento: mapas/mapa4.md
-      - Cobertura viária por tipo de pavimento (bairro/loteamento): mapas/mapa5.md
+      - 1. Rede viária: mapas/mapa1.md
+      - 2. Cobertura viária por tipo de pavimento: mapas/mapa2.md
+      - 3. Pavimentação por via: mapas/mapa3.md
+      - 4. Indicadores por bairro/loteamento: mapas/mapa4.md
+      - 5. Cobertura viária por tipo de pavimento (bairro/loteamento): mapas/mapa5.md
   - Gráficos:
       - Visão geral: graficos/index.md
-      - Composição das vias quanto ao tipo de pavimento: graficos/grafico1.md
-      - Composição das vias pavimentadas: graficos/grafico2.md
-      - Extensão total das vias por bairro/loteamento: graficos/grafico3.md
-      - Proporção de vias pavimentadas e não pavimentadas por bairro/loteamento: graficos/grafico4.md
-      - Densidade viária por bairro/loteamento: graficos/grafico5.md
-      - Extensão das vias por tipo de pavimento por bairro/loteamento: graficos/grafico6.md
-      - Distribuição percentual dos tipos de pavimento por bairro/loteamento: graficos/grafico7.md
+      - 1. Composição das vias quanto ao tipo de pavimento: graficos/grafico1.md
+      - 2. Composição das vias pavimentadas: graficos/grafico2.md
+      - 3. Extensão total das vias por bairro/loteamento: graficos/grafico3.md
+      - 4. Proporção de vias pavimentadas e não pavimentadas por bairro/loteamento: graficos/grafico4.md
+      - 5. Densidade viária por bairro/loteamento: graficos/grafico5.md
+      - 6. Extensão das vias por tipo de pavimento por bairro/loteamento: graficos/grafico6.md
+      - 7. Distribuição percentual dos tipos de pavimento por bairro/loteamento: graficos/grafico7.md
      
   - Dados: dados.md
-  - Reprodutibilidade: reproducibilidade.md
   - Sobre: sobre.md
