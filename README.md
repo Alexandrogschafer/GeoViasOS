@@ -27,15 +27,12 @@ Projeto desenvolvido no âmbito da **UNIPAMPA**, com apoio do **PROEXT/PROEC**, 
 
 ## Licenças e créditos
 
-Código: MIT (arquivo LICENSE).
+- **Código (site, scripts):** MIT — ver `LICENSE`.
+- **Documentação (textos e figuras estáticas):** CC BY 4.0 — ver `LICENSE-CC-BY`.
+- **Base de dados GeoVias Bagé-RS:** licenciada sob **ODbL 1.0** por incorporar/derivar dados do **OpenStreetMap** — atribuição obrigatória “© OpenStreetMap contributors”. Obras produzidas a partir da base (mapas, gráficos, tiles) podem ter licença própria, mas devem manter a atribuição ao OSM. Detalhes em `DATA_LICENSE`.
+- **Dados oficiais (SIG Territorial de Bagé):** incluídos com crédito à **Prefeitura Municipal de Bagé**; eventuais restrições adicionais estão descritas em `DATA_LICENSE`.
+- **Logos (BAGÉ+, UNIPAMPA, PROEC/PROEXT):** uso institucional; **todos os direitos reservados** (não abrangidos pelas licenças acima).
 
-Textos e imagens: CC BY 4.0 (arquivo LICENSE-CC-BY).
-
-Dados: se houver derivados do OpenStreetMap, a base está sob ODbL 1.0 e deve incluir o crédito “© OpenStreetMap contributors” (arquivo DATA_LICENSE).
-
-Logos (BAGÉ+, UNIPAMPA, PROEC): todos os direitos reservados.
-
-Créditos detalhados em ATTRIBUTION.md.
 
 ---
 
