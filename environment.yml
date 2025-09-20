@@ -1,0 +1,16 @@
+name: geoviasos
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - mkdocs
+  - mkdocs-material
+  - pip:
+      - mkdocs-minify-plugin==0.7.*
+      - mkdocs-git-revision-date-localized-plugin==1.2.*
+
+
+
+
+

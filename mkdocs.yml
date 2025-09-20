@@ -1,0 +1,46 @@
+site_name: GeoViasOS
+site_url: https://alexandrogschafer.github.io/GeoViasOS
+repo_url: https://github.com/Alexandrogschafer/GeoViasOS
+
+theme:
+  name: windmill
+  highlightjs: true
+  hljs_style: github
+  navigation_depth: 3
+
+extra_css:
+  - css/custom.css
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+
+
+extra_javascript:
+  - js/layout-fix.js
+
+  
+nav:
+  - Início: index.md
+  - Metodologia: metodologia.md
+  - Resultados: resultados.md
+  - Mapas interativos:
+      - Visão geral: mapas/index.md
+      - Rede viária: mapas/mapa1.md
+      - Cobertura viária por tipo de pavimento: mapas/mapa2.md
+      - Pavimentação por via: mapas/mapa3.md
+      - Indicadores por bairro/loteamento: mapas/mapa4.md
+      - Cobertura viária por tipo de pavimento (bairro/loteamento): mapas/mapa5.md
+  - Gráficos:
+      - Visão geral: graficos/index.md
+      - Composição das vias quanto ao tipo de pavimento: graficos/grafico1.md
+      - Composição das vias pavimentadas: graficos/grafico2.md
+      - Extensão total das vias por bairro/loteamento: graficos/grafico3.md
+      - Proporção de vias pavimentadas e não pavimentadas por bairro/loteamento: graficos/grafico4.md
+      - Densidade viária por bairro/loteamento: graficos/grafico5.md
+      - Extensão das vias por tipo de pavimento por bairro/loteamento: graficos/grafico6.md
+      - Distribuição percentual dos tipos de pavimento por bairro/loteamento: graficos/grafico7.md
+     
+  - Dados: dados.md
+  - Reprodutibilidade: reproducibilidade.md
+  - Sobre: sobre.md

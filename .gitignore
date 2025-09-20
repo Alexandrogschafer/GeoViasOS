@@ -1,0 +1,14 @@
+# mkdocs
+/site/
+/.overrides/
+
+# python
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints/
+
+# conda/mamba
+.conda/
+.mamba/
+.env/
+EOF
