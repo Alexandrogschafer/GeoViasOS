@@ -56,3 +56,10 @@ E-mail: <alexandro.schafer@unipampa.edu.br>
 
 Repositório: https://github.com/Alexandrogschafer/GeoViasOS
 
+
+## Citation
+
+If you use this project, please cite:
+
+Schäfer, A. G. (2026). GeoViasOS. https://doi.org/10.5281/zenodo.19209546
+
