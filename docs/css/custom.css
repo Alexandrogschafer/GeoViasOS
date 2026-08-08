@@ -1,217 +1,5 @@
-* ===== Estilo dos frames (mapas/gráficos) ===== */
+/* ===== Estilo dos frames (mapas/gráficos) ===== */
 .frame-viewport {
- position: relative;
- width: 100%;
- height: 80vh;
- border: 1px solid #e5e7eb;
- border-radius: 12px;
- overflow: hidden;
- margin: 1rem 0;
-}
-.frame-viewport iframe {
- position: absolute;
- inset: 0;
- width: 100%;
- height: 100%;
- border: 0;
-}
-
-
-/* ===== Grid dos cartões ===== */
-.grid-cards {
- display: grid;
- grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
- gap: 1rem;
- margin: 1rem 0;
- list-style: none;
- padding: 0;
-}
-.card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 1rem; }
-.card h3 { margin: .2rem 0 .6rem 0; }
-.card p  { margin: 0; color: #666; }
-
-
-/* imagens com classe .half-img (para PNGs em páginas .md) */
-.half-img {
- max-width: 50% !important;
- height: auto !important;
- display: block;
- margin: 1rem auto;
-}
-
-
-/* ===== Ajustes para desktops grandes (≥1200 px) ===== */
-@media (min-width: 1200px) {
- .wm-toc-pane {
-   width: 240px !important; /* sidebar maior em desktops grandes */
- }
- .wm-content-pane {
-   margin-left: 250px !important;
-   width: calc(100vw - 250px) !important;
-   max-width: none !important;
-   padding-left: 0 !important;
-   padding-right: 16px;
- }
- .wm-content-pane .wm-article {
-   display: block;
-   width: 100% !important;
-   height: calc(100vh - 64px) !important; /* ajuste a altura do topo se precisar */
-   border: 0;
- }
- .container-fluid.wm-page-content,
- .wm-page-content .container-fluid,
- .wm-page-content .container {
-   max-width: none !important;
-   width: 100% !important;
-   padding-left: 16px;
-   padding-right: 16px;
- }
- .frame-viewport { height: 90vh; }
-}
-
-
-/* ===== Ajustes para laptops médios (992–1199 px) ===== */
-@media (min-width: 992px) and (max-width: 1199px) {
- .wm-toc-pane {
-   width: 200px !important; /* sidebar um pouco menor */
- }
- .wm-content-pane {
-   margin-left: 210px !important;
-   width: calc(100vw - 210px) !important;
-   max-width: none !important;
-   padding-left: 0 !important;
-   padding-right: 16px;
- }
- .wm-content-pane .wm-article {
-   display: block;
-   width: 100% !important;
-   height: calc(100vh - 64px) !important;
-   border: 0;
- }
- .container-fluid.wm-page-content,
- .wm-page-content .container-fluid,
- .wm-page-content .container {
-   max-width: none !important;
-   width: 100% !important;
-   padding-left: 16px;
-   padding-right: 16px;
- }
- .frame-viewport { height: 88vh; }
-}
-
-
-
-
-/* ===== Sidebar: tipografia e quebra de linha ===== */
-.wm-toc-pane {
- font-size: 14px;           /* antes ~16px */
- line-height: 1.25;         /* mais “apertado”, mas legível */
-}
-
-
-.wm-toc-pane a {
- font-size: 14px;
- line-height: 1.25;
- overflow-wrap: anywhere;   /* permite quebrar nomes longos */
- hyphens: auto;             /* hifeniza quando possível */
- text-decoration: none;
-}
-
-
-.wm-toc-pane li {
- margin: 0 0 .25rem 0;      /* aproxima itens */
-}
-
-
-.wm-toc-pane .caption {      /* títulos “Mapas interativos”, “Gráficos”…  */
- font-weight: 600;
- margin-top: .5rem;
- margin-bottom: .25rem;
-}
-
-
-/* bloco para logos lado a lado, com espaçamento */
-.brand-logos {
- display: flex;
- align-items: center;
- justify-content: center;   /* ou flex-start, se preferir à esquerda */
- gap: 28px;                 /* << ajuste o espaço entre os logos */
- flex-wrap: wrap;           /* quebra linha no mobile */
- margin: 1rem 0;
-}
-
-
-.brand-logos img {
- max-height: 90px;          /* limite de altura (ajuste se quiser) */
- display: block;
-}
-
-
-img.center {
- display: block;
- margin: 0.5rem auto;
-}
-
-
-
-
-
-
-.logos-centro {
- display: flex;
- justify-content: center;
- align-items: center;
- gap: 10px;               /* espaço entre os logos */
- flex-wrap: wrap;         /* quebra no mobile */
- margin: 1rem 0;
-}
-
-
-/* controla o tamanho dos logos de forma responsiva */
-.logos-centro img {
- width: clamp(180px, 22vw, 300px);  /* min 180, ideal 22% da viewport, máx 300 */
- height: auto;
-}
-
-
-/* === Retrato / telas estreitas: não achatar os embeds === */
-@media (max-width: 991.98px), (orientation: portrait){
-  /* garante que o wrapper fique alto no retrato */
-  .frame-viewport{
-    height: 78svh;          /* svh é mais estável que vh no mobile */
-    min-height: 65svh;
-  }
-
-  /* se algo do tema limitar iframes, anula aqui */
-  .wm-article iframe,
-  .md-typeset iframe{
-    width: 100% !important;
-    height: 75svh !important;
-    max-height: none !important;
-    border: 0;
-    display: block;
-  }
-
-  /* evita “esmagar” o conteúdo por causa da sidebar/layout */
-  .wm-content-pane{
-    margin-left: 0 !important;
-    width: 100% !important;
-    max-width: none !important;
-    padding-left: 0 !important;
-    padding-right: 12px;
-  }
-}
-
-/* Nunca limitar altura de embeds (cobre Plotly/Folium) */
-.md-typeset iframe,
-.plotly-graph-div,
-.folium-map{
-  max-height: none !important;
-  height: auto;
-}
-
-/* Seu wrapper (troca vh por svh para funcionar melhor no mobile) */
-.frame-viewport{
   position: relative;
   width: 100%;
   height: 80svh;
@@ -220,7 +8,7 @@ img.center {
   overflow: hidden;
   margin: 1rem 0;
 }
-.frame-viewport iframe{
+.frame-viewport iframe {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -228,60 +16,81 @@ img.center {
   border: 0;
 }
 
+/* Nunca limitar altura de embeds (cobre Plotly/Folium) */
+.md-typeset iframe,
+.plotly-graph-div,
+.folium-map {
+  max-height: none !important;
+  height: auto;
+}
 
-/* ===== Mobile/estreito: overlay, sem empurrar o conteúdo ===== */
-@media (max-width: 991.98px){
-  .wm-content-pane{
-    margin-left: 0 !important;
+/* No retrato/telas estreitas, garante que o embed continue alto */
+@media (max-width: 991.98px), (orientation: portrait) {
+  .frame-viewport {
+    height: 78svh;
+    min-height: 65svh;
+  }
+  .md-typeset iframe {
     width: 100% !important;
-    max-width: none !important;
+    height: 75svh !important;
+    max-height: none !important;
+    border: 0;
+    display: block;
   }
 }
 
-/* ===== Viewports ≥ 992px: sidebar fixa empurrando o conteúdo ===== */
-@media (min-width: 992px){
-  .wm-toc-pane{
-    width: 210px !important;            /* ajuste igual ao seu breakpoint 992–1199 */
-  }
-  .wm-content-pane{
-    margin-left: 210px !important;       /* NÃO zerar no retrato largo */
-    width: calc(100vw - 210px) !important;
-    max-width: none !important;
-  }
+/* ===== Grid dos cartões ===== */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+  list-style: none;
+  padding: 0;
+}
+.card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 1rem; }
+.card h3 { margin: .2rem 0 .6rem 0; }
+.card p { margin: 0; color: #666; }
+
+/* imagens com classe .half-img (para PNGs em páginas .md) */
+.half-img {
+  max-width: 50% !important;
+  height: auto !important;
+  display: block;
+  margin: 1rem auto;
 }
 
-/* ≥1200px segue empurrando com 240–250px (mantém suas regras existentes) */
-@media (min-width: 1200px){
-  .wm-toc-pane{ width: 240px !important; }
-  .wm-content-pane{
-    margin-left: 250px !important;
-    width: calc(100vw - 250px) !important;
-  }
+/* bloco para logos lado a lado, com espaçamento */
+.brand-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+.brand-logos img {
+  max-height: 90px;
+  display: block;
 }
 
-
-/* 1) Esconde o TOC local quando o tema o marca explicitamente */
-.wm-toc-pane nav.local-toc,
-.wm-toc-pane .local-toc,
-.wm-toc-pane nav[aria-label="Table of contents"]{
-  display: none !important;
+img.center {
+  display: block;
+  margin: 0.5rem auto;
 }
 
-/* 2) (Robusto) Esconde apenas ULs cujo conteúdo são âncoras (#...) = subtítulos da página
-   Requer suporte a :has() — funciona nos navegadores modernos */
-.wm-toc-pane ul:has(> li > a[href^="#"]) {
-  display: none !important;
+.logos-centro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 1rem 0;
 }
-
-/* 3) (Opcional) Se o tema aninha o TOC local logo abaixo do item atual */
-.wm-toc-pane li.current > ul:has(> li > a[href^="#"]),
-.wm-toc-pane li.active  > ul:has(> li > a[href^="#"]) {
-  display: none !important;
+.logos-centro img {
+  width: clamp(180px, 22vw, 300px);
+  height: auto;
 }
-
-
-
-
 
 /* Imagens de markdown: nunca ultrapassar o container */
 .md-typeset img {
@@ -289,27 +98,20 @@ img.center {
   height: auto;
 }
 
-/* No retrato, aumente imagens que ficaram “pequenas” por width fixo/percentual */
-@media (max-width: 991.98px), (orientation: portrait){
-  /* qualquer imagem */
+/* No retrato, imagens com width fixo/percentual usam a largura toda */
+@media (max-width: 991.98px), (orientation: portrait) {
   .md-typeset img {
-    width: 100% !important;         /* força usar toda a largura disponível */
-    max-width: 100% !important;
-  }
-
-  /* sua classe half-img deve virar “quase cheia” no retrato */
-  .half-img{
-    max-width: 96% !important;
-  }
-
-  /* imagens centralizadas que você usou com <img class="center" ...> */
-  img.center{
     width: 100% !important;
     max-width: 100% !important;
   }
-
-  /* se houver imagens com atributo width (ex.: {width="40%"}), ignore-o no retrato */
-  .md-typeset img[width]{
+  .half-img {
+    max-width: 96% !important;
+  }
+  img.center {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .md-typeset img[width] {
     width: 100% !important;
   }
 }
