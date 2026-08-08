@@ -2,7 +2,7 @@
 
 [![Site online](https://img.shields.io/badge/GitHub%20Pages-online-brightgreen)](https://alexandrogschafer.github.io/GeoViasOS/)
 [![MkDocs](https://img.shields.io/badge/docs-MkDocs-blue)](https://www.mkdocs.org/)
-[![Theme](https://img.shields.io/badge/theme-Windmill-6aa84f)](https://github.com/gristlabs/mkdocs-windmill)
+[![Theme](https://img.shields.io/badge/theme-Material-6aa84f)](https://squidfunk.github.io/mkdocs-material/)
 
 **Acesse o site:** https://alexandrogschafer.github.io/GeoViasOS/
 
@@ -18,7 +18,7 @@ Projeto desenvolvido no âmbito da **UNIPAMPA**, com apoio do **PROEXT/PROEC**, 
 ## Tecnologias
 
 - **MkDocs** (gerador estático)
-- Tema **Windmill** (`mkdocs-windmill`)
+- Tema **Material for MkDocs** (`mkdocs-material`)
 - CSS customizado em `docs/css/custom.css`
 - Gráficos/Mapas interativos embarcados via **HTML** (`docs/embeds/...`)
 

@@ -3,10 +3,34 @@ site_url: https://alexandrogschafer.github.io/GeoViasOS
 repo_url: https://github.com/Alexandrogschafer/GeoViasOS
 
 theme:
-  name: windmill
-  highlightjs: true
-  hljs_style: github
-  navigation_depth: 3
+  name: material
+  language: pt-BR
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Mudar para modo escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Mudar para modo claro
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
 
 extra_css:
   - css/custom.css
@@ -15,11 +39,15 @@ markdown_extensions:
   - attr_list
   - md_in_html
 
+plugins:
+  - search
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      type: date
+      locale: pt
+      fallback_to_build_date: true
 
-extra_javascript:
-  - js/layout-fix.js
-  
-  
 nav:
   - Início: index.md
   - Contribua com informações: contribua.md
@@ -41,6 +69,5 @@ nav:
       - 5. Densidade viária por bairro/loteamento: graficos/grafico5.md
       - 6. Extensão das vias por tipo de pavimento por bairro/loteamento: graficos/grafico6.md
       - 7. Distribuição percentual dos tipos de pavimento por bairro/loteamento: graficos/grafico7.md
-     
   - Dados: dados.md
   - Sobre: sobre.md
